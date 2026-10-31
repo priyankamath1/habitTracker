@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Habit Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Website Container -->
+    <div class="container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+
+            <!-- Website Logo -->
+            <div class="logo">
+                <h2>🌱 HabitTrack</h2>
+                <p>Student Edition</p>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation">
+
+                <a href="#dashboard" class="nav-link active">
+                    🏠 Dashboard
+                </a>
+
+                <a href="#habits" class="nav-link">
+                    📋 My Habits
+                </a>
+
+                <a href="#calendar" class="nav-link">
+                    📅 Calendar
+                </a>
+
+                <a href="#progress" class="nav-link">
+                    📊 My Progress
+                </a>
+
+                <a href="#profile" class="nav-link">
+                    👤 Profile
+                </a>
+
+                <a href="#settings" class="nav-link">
+                    ⚙️ Settings
+                </a>
+
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <p>Stay Consistent! 💜</p>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="header">
+
+                <div class="header-left">
+                    <h2>Student Habit Tracker</h2>
+                    <p>Build better habits every day.</p>
+                </div>
+
+                <div class="header-right">
+
+                    <span id="current-date">
+                        Today's Date
+                    </span>
+
+                    <div class="profile-icon">
+                        👤
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="dashboard">
+
+                <!-- Welcome Message -->
+                <div class="welcome-section">
+
+                    <h1>Welcome Back, Student! 👋</h1>
+
+                    <p>
+                        Small steps every day lead to big achievements.
+                        Let's make today productive!
+                    </p>
+
+                </div>
+
+                <!-- HTML Part 2 continues here -->
+
+<!-- Statistics Section -->
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <div class="stat-icon">📚</div>
+        <h3>Total Habits</h3>
+        <h2 id="total-habits">0</h2>
+        <p>Habits created</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <h3>Completed</h3>
+        <h2 id="completed-habits">0</h2>
+        <p>Habits completed today</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <h3>Pending</h3>
+        <h2 id="pending-habits">0</h2>
+        <p>Habits remaining today</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <h3>Current Streak</h3>
+        <h2 id="current-streak">0</h2>
+        <p>Consecutive days</p>
+    </div>
+
+</div>
+
+
+<!-- Today's Progress Section -->
+
+<div class="progress-card">
+
+    <div class="section-heading">
+        <h2>Today's Progress</h2>
+        <span id="progress-percentage">0%</span>
+    </div>
+
+    <div class="progress-bar">
+        <div id="progress-fill"></div>
+    </div>
+
+    <p id="progress-message">
+        Start completing your habits today!
+    </p>
+
+</div>
+
+
+<!-- My Habits Section -->
+
+<section id="habits" class="habit-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>My Daily Habits 🌱</h2>
+            <p>Stay consistent with your daily routine.</p>
+        </div>
+    </div>
+
+
+    <!-- Add New Habit Form -->
+
+    <div class="add-habit">
+
+        <h3>Add a New Habit</h3>
+
+        <form id="habit-form">
+
+            <input
+                type="text"
+                id="habit-input"
+                placeholder="Enter your habit..."
+                maxlength="60"
+                required
+            >
+
+            <select id="habit-category" required>
+                <option value="">Select Category</option>
+                <option value="Study">📚 Study</option>
+                <option value="Coding">💻 Coding</option>
+                <option value="Reading">📖 Reading</option>
+                <option value="Health">🏃 Health</option>
+                <option value="Personal Growth">🌱 Personal Growth</option>
+            </select>
+
+            <button type="submit">
+                + Add Habit
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Daily Habit List -->
+
+    <div class="habit-list-section">
+
+        <h3>Today's Checklist</h3>
+
+        <div id="habit-list">
+
+            <!-- Habits will appear here using JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Weekly Progress Section -->
+
+<section class="weekly-section">
+
+    <div class="section-heading">
+        <h2>Weekly Progress 📊</h2>
+        <p>Track your consistency throughout the week.</p>
+    </div>
+
+    <div id="weekly-progress">
+
+        <!-- Weekly progress will appear here using JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- HTML Part 3 continues here -->
+
+<!-- Calendar Section -->
+
+<section id="calendar" class="calendar-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>Habit Calendar 📅</h2>
+            <p>View your daily habit activity.</p>
+        </div>
+    </div>
+
+    <div class="calendar-header">
+
+        <button id="prev-month" type="button">
+            ❮
+        </button>
+
+        <h3 id="calendar-month">Month Year</h3>
+
+        <button id="next-month" type="button">
+            ❯
+        </button>
+
+    </div>
+
+    <div id="calendar-grid" class="calendar-grid">
+
+        <!-- Calendar dates will be added using JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- My Progress Section -->
+
+<section id="progress" class="progress-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>My Progress 📊</h2>
+            <p>Check your habit performance.</p>
+        </div>
+    </div>
+
+    <div class="progress-details">
+
+        <div class="progress-detail-card">
+            <h3>Weekly Completion</h3>
+            <h2 id="weekly-percentage">0%</h2>
+            <p>Your weekly performance</p>
+        </div>
+
+        <div class="progress-detail-card">
+            <h3>Monthly Completion</h3>
+            <h2 id="monthly-percentage">0%</h2>
+            <p>Your monthly performance</p>
+        </div>
+
+        <div class="progress-detail-card">
+            <h3>Best Streak</h3>
+            <h2 id="best-streak">0 Days</h2>
+            <p>Your longest streak</p>
+        </div>
+
+    </div>
+
+    <div class="chart-container">
+
+        <h3>Habit Activity</h3>
+
+        <canvas id="progress-chart"></canvas>
+
+    </div>
+
+</section>
+
+
+<!-- Profile Section -->
+
+<section id="profile" class="profile-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>My Profile 👤</h2>
+            <p>Manage your student information.</p>
+        </div>
+    </div>
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+        <form id="profile-form">
+
+            <label for="student-name">Student Name</label>
+
+            <input
+                type="text"
+                id="student-name"
+                placeholder="Enter your name"
+            >
+
+            <label for="student-email">Email Address</label>
+
+            <input
+                type="email"
+                id="student-email"
+                placeholder="Enter your email"
+            >
+
+            <label for="student-course">Course</label>
+
+            <input
+                type="text"
+                id="student-course"
+                placeholder="Example: Computer Science"
+            >
+
+            <button type="submit">
+                Save Profile
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- Settings Section -->
+
+<section id="settings" class="settings-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>Settings ⚙️</h2>
+            <p>Customize your website preferences.</p>
+        </div>
+    </div>
+
+    <div class="settings-card">
+
+        <div class="setting-item">
+
+            <div>
+                <h3>Dark Mode</h3>
+                <p>Change the website appearance.</p>
+            </div>
+
+            <input
+                type="checkbox"
+                id="dark-mode"
+            >
+
+        </div>
+
+        <hr>
+
+        <div class="setting-item">
+
+            <div>
+                <h3>Notifications</h3>
+                <p>Enable habit reminders.</p>
+            </div>
+
+            <input
+                type="checkbox"
+                id="notifications"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer Section -->
+
+<footer class="footer">
+
+    <h3>🌱 Student Habit Tracker</h3>
+
+    <p>
+        Build better habits. Stay consistent.
+        Achieve your goals.
+    </p>
+
+    <p class="copyright">
+        © 2026 Student Habit Tracker. All rights reserved.
+    </p>
+
+</footer>
+
+
+        </main>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
